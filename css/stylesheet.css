@@ -83,13 +83,13 @@ strong{ color: rgba(255,255,255,.96); }
   min-width: 230px;
 }
 .logo{
-  width: 96px;
-  height: 96px;
+  width: 128px;
+  height: 128px;
   image-rendering: pixelated;
   border-radius: 14px;
   border: 1px solid var(--border);
   background: rgba(255,255,255,.06);
-  padding: 15px;
+  padding: 9px;
 }
 .brand-text{ display: grid; }
 .brand-name{
