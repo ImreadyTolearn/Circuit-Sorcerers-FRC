@@ -79,17 +79,17 @@ strong{ color: rgba(255,255,255,.96); }
 .brand{
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   min-width: 230px;
 }
 .logo{
-  width: 64px;
-  height: 64px;
+  width: 96px;
+  height: 96px;
   image-rendering: pixelated;
   border-radius: 14px;
   border: 1px solid var(--border);
   background: rgba(255,255,255,.06);
-  padding: 8px;
+  padding: 15px;
 }
 .brand-text{ display: grid; }
 .brand-name{
