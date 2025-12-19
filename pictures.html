@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Circuit Sorcerers | Pictures</title>
+  <link rel="icon" type="image/png" href="Images/CircuitSorcerers.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/stylesheet.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header compact">
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-container">
+        <a class="brand" href="index.html">
+          <img src="Images/CircuitSorcerers.png" alt="Circuit Sorcerers logo" class="logo" />
+          <span class="brand-text">
+            <span class="brand-name">Circuit Sorcerers</span>
+            <span class="brand-tagline">Mages meet technology</span>
+          </span>
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+          <span aria-hidden="true">☰</span>
+        </label>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="first.html">FIRST</a></li>
+          <li><a class="active" href="pictures.html">Pictures</a></li>
+          <li><a href="sponsors.html">Sponsors</a></li>
+          <li><a class="cta" href="https://hcb.hackclub.com/donations/start/circuit-sorcerers" target="_blank" rel="noopener">Donate</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="page-title">
+      <h1>Pictures</h1>
+      <p class="muted">Drop your team photos here when you have them.</p>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+    <section class="section">
+      <div class="card">
+        <p class="muted">
+          Replace these placeholders with your real images. Keep filenames simple and consistent.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <figure class="gallery-item card">
+          <img src="Images/worlds_comp.JPG" alt="FIRST Championship photo" loading="lazy">
+          <figcaption>FIRST Championship</figcaption>
+        </figure>
+
+        <figure class="gallery-item card">
+          <div class="placeholder" aria-hidden="true">Add photo</div>
+          <figcaption>Build season</figcaption>
+        </figure>
+
+        <figure class="gallery-item card">
+          <div class="placeholder" aria-hidden="true">Add photo</div>
+          <figcaption>Outreach</figcaption>
+        </figure>
+
+        <figure class="gallery-item card">
+          <div class="placeholder" aria-hidden="true">Add photo</div>
+          <figcaption>Robot reveal</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="fineprint">© <span id="year"></span> Circuit Sorcerers.</p>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
