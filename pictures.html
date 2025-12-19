@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Circuit Sorcerers | Pictures</title>
+
+  <link rel="icon" type="image/png" href="Images/CircuitSorcerers.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/stylesheet.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header compact">
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-container">
+        <a class="brand" href="index.html">
+          <img src="Images/CircuitSorcerers.png" alt="Circuit Sorcerers logo" class="logo" />
+          <span class="brand-text">
+            <span class="brand-name">Circuit Sorcerers</span>
+            <span class="brand-tagline">Mages meet technology</span>
+          </span>
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+          <span aria-hidden="true">☰</span>
+        </label>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="first.html">FIRST</a></li>
+          <li><a class="active" href="pictures.html">Pictures</a></li>
+          <li><a href="sponsors.html">Sponsors</a></li>
+          <li><a class="cta" href="https://hcb.hackclub.com/donations/start/circuit-sorcerers" target="_blank" rel="noopener">Donate</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="page-title">
+      <h1>Pictures</h1>
+      <p class="muted">Build season, outreach, events, and the chaos we survive together.</p>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+    <section class="section">
+      <div class="split">
+        <div class="card">
+          <h2>Gallery</h2>
+          <p class="muted">
+            Add your images to the <code>/Images</code> folder and update the filenames below.
+            Click any photo to view it bigger.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>Quick tips</h2>
+          <ul class="bullets">
+            <li>Use consistent filenames like <code>team_01.jpg</code>, <code>build_02.jpg</code></li>
+            <li>Keep photos under ~2–3 MB so the site loads fast</li>
+            <li>Add real captions and good alt text (judges like this)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Masonry-style gallery -->
+    <section class="section">
+      <div class="gallery-pro">
+        <!-- Replace src + caption -->
+        <figure class="photo-card">
+          <a href="Images/worlds_comp.JPG" class="lightbox-trigger" data-full="Images/worlds_comp.JPG" data-caption="FIRST Championship">
+            <img src="Images/worlds_comp.JPG" alt="A picture from the FIRST Championship event." loading="lazy">
+          </a>
+          <figcaption>FIRST Championship</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <a href="Images/placeholder_01.jpg" class="lightbox-trigger" data-full="Images/placeholder_01.jpg" data-caption="Build season">
+            <img src="Images/placeholder_01.jpg" alt="Students working during build season." loading="lazy">
+          </a>
+          <figcaption>Build season</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <a href="Images/placeholder_02.jpg" class="lightbox-trigger" data-full="Images/placeholder_02.jpg" data-caption="Outreach event">
+            <img src="Images/placeholder_02.jpg" alt="Team members at an outreach event." loading="lazy">
+          </a>
+          <figcaption>Outreach</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <a href="Images/placeholder_03.jpg" class="lightbox-trigger" data-full="Images/placeholder_03.jpg" data-caption="Robot in progress">
+            <img src="Images/placeholder_03.jpg" alt="Robot being assembled on a table." loading="lazy">
+          </a>
+          <figcaption>Robot in progress</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <a href="Images/placeholder_04.jpg" class="lightbox-trigger" data-full="Images/placeholder_04.jpg" data-caption="Team photo">
+            <img src="Images/placeholder_04.jpg" alt="Team photo." loading="lazy">
+          </a>
+          <figcaption>Team photo</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <a href="Images/placeholder_05.jpg" class="lightbox-trigger" data-full="Images/placeholder_05.jpg" data-caption="Pit setup">
+            <img src="Images/placeholder_05.jpg" alt="Team pit setup at a competition." loading="lazy">
+          </a>
+          <figcaption>Pit setup</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Lightbox modal -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close image">✕</button>
+      <img id="lightboxImg" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="fineprint">© <span id="year"></span> Circuit Sorcerers.</p>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Simple lightbox
+      const lb = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lightboxImg");
+      const lbCap = document.getElementById("lightboxCaption");
+      const lbClose = document.getElementById("lightboxClose");
+
+      function openLightbox(src, caption, alt){
+        lbImg.src = src;
+        lbImg.alt = alt || caption || "Expanded image";
+        lbCap.textContent = caption || "";
+        lb.classList.add("open");
+        lb.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox(){
+        lb.classList.remove("open");
+        lb.setAttribute("aria-hidden", "true");
+        lbImg.src = "";
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll(".lightbox-trigger").forEach(a => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          const src = a.dataset.full || a.getAttribute("href");
+          const caption = a.dataset.caption || "";
+          const img = a.querySelector("img");
+          openLightbox(src, caption, img ? img.alt : caption);
+        });
+      });
+
+      lbClose.addEventListener("click", closeLightbox);
+      lb.addEventListener("click", (e) => {
+        if(e.target === lb) closeLightbox();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if(e.key === "Escape" && lb.classList.contains("open")) closeLightbox();
+      });
+    </script>
+  </footer>
+</body>
+</html>
